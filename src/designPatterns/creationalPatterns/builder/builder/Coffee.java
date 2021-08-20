@@ -3,7 +3,6 @@ package designPatterns.creationalPatterns.builder.builder;
 public class Coffee {
 
 	private boolean	drinkable, sweet, withMilk, withCoffee, withWhiskey, withWhippedCream;
-	private MilkKind milkKind;
 	
 	public Coffee() {
 		drinkable = false;
@@ -12,7 +11,6 @@ public class Coffee {
 		withCoffee = false;
 		withWhiskey = false;
 		withWhippedCream = false;
-		milkKind = MilkKind.DefaultMax;
 	}
 	
 	@Override
@@ -21,7 +19,7 @@ public class Coffee {
 		sb.append("Coffee, that is ")
 		.append(drinkable ? "drinkable" : "not drinkable")
 		.append(", ")
-		.append(withMilk ? ("with " + milkKind.toString() + " milk") : "without milk")
+		.append(withMilk ? ("with milk") : "without milk")
 		.append(", ")
 		.append(withCoffee ? "with coffee" : "without coffee")
 		.append(", ")
@@ -30,14 +28,6 @@ public class Coffee {
 		.append(withWhippedCream ? "with whipped cream" : "without whipped cream");
 		
 		return sb.toString();
-	}
-
-	public MilkKind getMilkKind() {
-		return milkKind;
-	}
-
-	public void setMilkKind(MilkKind milkKind) {
-		this.milkKind = milkKind;
 	}
 
 	public boolean isDrinkable() {

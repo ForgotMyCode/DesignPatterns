@@ -1,48 +1,45 @@
 package designPatterns.creationalPatterns.builder.builder;
 
-public class CoffeeBuilder implements ICoffeeBuilder {
+public class CoffeeBuilder {
+
+	private Coffee coffee = null;
 	
-	private Coffee coffeeResult = null;
-
-	@Override
-	public void addBoiledWater() {
-		coffeeResult.setDrinkable(true);
+	public CoffeeBuilder reset() {
+		coffee = new Coffee();
+		return this;
 	}
-
-	@Override
-	public void addCoffee() {
-		coffeeResult.setWithCoffee(true);
+	
+	public CoffeeBuilder addWater() {
+		coffee.setDrinkable(true);
+		return this;
 	}
-
-	@Override
-	public void addSugar() {
-		coffeeResult.setSweet(true);
+	
+	public CoffeeBuilder addMilk() {
+		coffee.setWithMilk(true);
+		return this;
 	}
-
-	@Override
-	public void addMilk(MilkKind milkKind) {
-		coffeeResult.setWithMilk(true);
-		coffeeResult.setMilkKind(milkKind);
+	
+	public CoffeeBuilder addSugar() {
+		coffee.setSweet(true);
+		return this;
 	}
-
-	@Override
-	public void addWhippedCream() {
-		coffeeResult.setWithWhippedCream(true);
+	
+	public CoffeeBuilder addCoffee() {
+		coffee.setWithCoffee(true);
+		return this;
 	}
-
-	@Override
-	public void addWhiskey(String whiskeyKind) {
-		coffeeResult.setWithWhiskey(true);
+	
+	public CoffeeBuilder addWhiskey() {
+		coffee.setWithWhiskey(true);
+		return this;
 	}
-
-	@Override
-	public void reset() {
-		coffeeResult = new Coffee();
+	
+	public CoffeeBuilder addWhippedCream() {
+		coffee.setWithWhippedCream(true);
+		return this;
 	}
-
-	@Override
-	public Object build() {
-		return coffeeResult;
+	
+	public Coffee build() {
+		return coffee;
 	}
-
 }

@@ -1,10 +1,7 @@
 package designPatterns.creationalPatterns.builder;
 
 import designPatterns.creationalPatterns.builder.builder.Coffee;
-import designPatterns.creationalPatterns.builder.builder.CoffeeBuilder;
 import designPatterns.creationalPatterns.builder.builder.CoffeeDirector;
-import designPatterns.creationalPatterns.builder.builder.CoffeeRecipe;
-import designPatterns.creationalPatterns.builder.builder.CoffeeRecipeBuilder;
 
 /**
  * 
@@ -15,17 +12,13 @@ import designPatterns.creationalPatterns.builder.builder.CoffeeRecipeBuilder;
 public class Main {
 
 	public static void main(String[] args) {
-		final CoffeeBuilder coffeeBuilder = new CoffeeBuilder();
-		final CoffeeRecipeBuilder coffeeRecipeBuilder = new CoffeeRecipeBuilder();
 		final CoffeeDirector coffeeDirector = new CoffeeDirector();
 		
-		coffeeDirector.setBuilder(coffeeBuilder);
-		
-		Coffee sweetCoffee = (Coffee) coffeeDirector.makeSweetCoffee();
+		final Coffee sweetCoffee = coffeeDirector.makeSweetCoffee();		
 		System.out.println(sweetCoffee);
 		
-		CoffeeRecipe irishCoffeeRecipe = (CoffeeRecipe) coffeeDirector.makeIrishCoffee(coffeeRecipeBuilder);
-		System.out.println(irishCoffeeRecipe);
+		final Coffee irishCoffee = coffeeDirector.makeIrishCoffee();
+		System.out.println(irishCoffee);
 	}
 
 }
