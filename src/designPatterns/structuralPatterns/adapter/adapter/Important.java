@@ -1,4 +1,4 @@
-package designPatterns.structuralPatterns.adapter;
+package designPatterns.structuralPatterns.adapter.adapter;
 
 public class Important {
 

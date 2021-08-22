@@ -1,5 +1,9 @@
 package designPatterns.structuralPatterns.adapter;
 
+import designPatterns.structuralPatterns.adapter.adapter.CompatibleObject;
+import designPatterns.structuralPatterns.adapter.adapter.Important;
+import designPatterns.structuralPatterns.adapter.adapter.IncompatibleObject;
+import designPatterns.structuralPatterns.adapter.adapter.IncompatibleObjectAdapter;
 
 /**
  * 
