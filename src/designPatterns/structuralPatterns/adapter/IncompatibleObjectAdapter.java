@@ -10,7 +10,7 @@ public class IncompatibleObjectAdapter extends CompatibleObject {
 	
 	@Override
 	public float someMethod() {
-		// some way to use this method for the object of the instance given in constructor
+		// some way to use this method for the instance given in constructor
 		return this.incompatibleObject.differentMethod() * 15.0f;
 	}
 

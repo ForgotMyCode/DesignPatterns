@@ -5,6 +5,8 @@ package designPatterns.structuralPatterns.adapter;
  * 
  * @author ForgotMyCode
  * @implSpec A way to make instances of different interfaces work together.
+ * Extend a compatible class or implement compatible interface,
+ * take incompatible instance as an argument in constructor. 
  *
  */
 public class Main {
