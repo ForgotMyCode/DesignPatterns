@@ -46,7 +46,7 @@ public class Main {
 		
 		System.out.println();
 		
-		// --- USING FLYWEIGHT --- //¨
+		// --- USING FLYWEIGHT --- //
 		
 		System.out.println("Approach using flyweight...");
 		
